@@ -1,12 +1,11 @@
 version: '3.9'
 services:
     kavita:
-        image: kizaing/kavita:ubuntu-0.3.5
+        image: kizaing/kavita:latest
         volumes:
             - ./manga:/manga
             - ./data/temp:/kavita/temp
             - ./data/cache:/kavita/cache
-            #- ./data/appsettings.json:/kavita/appsettings.json
             - ./data:/kavita/data
         ports:
             - "5000:5000"
