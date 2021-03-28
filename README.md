@@ -12,6 +12,7 @@ docker run --name kavita -p 5000:5000 \
 -v ./data/temp:/kavita/temp \
 -v ./data/cache:/kavita/cache \
 -v ./data:/kavita/data \
+--restart unless-stopped \
 -d kizaing/kavita:latest
 ```
 
@@ -29,6 +30,7 @@ services:
             - ./data:/kavita/data
         ports:
             - "5000:5000"
+        restart: unless-stopped
 ```
 
 Once it's running head to http://localhost:5000 and set up your admin account. After you login, you can set your manga library folder as /manga
