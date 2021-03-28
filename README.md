@@ -11,7 +11,6 @@ Running your Kavita server in docker is super easy! You can run it with this com
 This command will run the container, but the database will not persist. It is encouraged to run the docker-compose file
 
 ```
-{
 version: '3.9'
 services:
     kavita:
@@ -23,7 +22,6 @@ services:
             - ./data:/kavita/data
         ports:
             - "5000:5000"
-}
 ```
 
 Once it's running head to http://localhost:5000 and set up your admin account. After you login, you can set your manga library folder as /manga
