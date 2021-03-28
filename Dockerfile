@@ -8,17 +8,16 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
   
 #Downloads Kavita, unzips and moves the folders to where they need to be
-RUN wget https://github.com/Kareadita/Kavita/releases/download/v0.3.5/kavita-v0.3.5-linux-x64.tar.gz \
-    && tar -xzf kavita-v0.3.5-linux-x64.tar.gz \
+RUN wget https://github.com/Kareadita/Kavita/releases/download/v0.3.6/kavita-v0.3.6-linux-x64.tar.gz \
+    && tar -xzf kavita*.tar.gz \
     && mv Kavita/ /kavita/ \
-    && rm kavita-v0.3.5-linux-x64.tar.gz \
+    && rm kavita*.tar.gz \
     && chmod +x /kavita/Kavita
 
 #Creates the manga storage directory
 RUN mkdir /manga
 
-RUN cp /kavita/appsettings.Development.json /kavita/appsettings.json \
-  && sed -i 's/Data source=kavita.db/Data source=data\/kavita.db/g' /kavita/appsettings.json
+RUN sed -i 's/Data source=kavita.db/Data source=data\/kavita.db/g' /kavita/appsettings.json
 	
 COPY entrypoint.sh /entrypoint.sh
 
