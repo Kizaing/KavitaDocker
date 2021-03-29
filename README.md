@@ -1,7 +1,7 @@
 # What is Kavita?
 Kavita is a free and open source web based Manga e-reader. 
 
-It was developed by Kareadita and the source is [here](https://github.com/Kareadita/Kavita)
+It was developed by majora2007 and the source is [here](https://github.com/Kareadita/Kavita)
 
 # How to use
 Running your Kavita server in docker is super easy! You can run it with this command: 
