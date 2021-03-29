@@ -12,6 +12,7 @@ docker run --name kavita -p 5000:5000 \
 -v ./data/temp:/kavita/temp \
 -v ./data/cache:/kavita/cache \
 -v ./data:/kavita/data \
+-v ./data/logs:/kavita/logs \
 --restart unless-stopped \
 -d kizaing/kavita:latest
 ```
@@ -28,6 +29,7 @@ services:
             - ./data/temp:/kavita/temp
             - ./data/cache:/kavita/cache
             - ./data:/kavita/data
+            - ./data/logs:/kavita/logs
         ports:
             - "5000:5000"
         restart: unless-stopped
