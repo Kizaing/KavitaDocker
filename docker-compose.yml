@@ -7,6 +7,7 @@ services:
             - ./data/temp:/kavita/temp
             - ./data/cache:/kavita/cache
             - ./data:/kavita/data
+            - ./data/logs:/kavita/logs
         ports:
             - "5000:5000"
         restart: unless-stopped
