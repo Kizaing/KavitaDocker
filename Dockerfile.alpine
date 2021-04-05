@@ -1,4 +1,4 @@
-#This Dockerfile is for the musl alpine build of Kavita. It currently has a bug and is not working
+#This Dockerfile is for the musl alpine build of Kavita.
 FROM alpine:latest
 
 MAINTAINER Chris P
