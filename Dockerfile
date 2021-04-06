@@ -8,7 +8,7 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
   
 #Downloads Kavita, unzips and moves the folders to where they need to be
-RUN wget https://github.com/Kareadita/Kavita/releases/download/v0.3.6/kavita-v0.3.6-linux-x64.tar.gz \
+RUN wget https://github.com/Kareadita/Kavita/releases/download/v0.3.7/kavita-linux-x64.tar.gz \
     && tar -xzf kavita*.tar.gz \
     && mv Kavita/ /kavita/ \
     && rm kavita*.tar.gz \
