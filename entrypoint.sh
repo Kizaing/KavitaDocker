@@ -13,9 +13,6 @@ then
 	rm /kavita/appsettings.json
 	ln -s /kavita/data/appsettings.json /kavita/
 else
-	export TOKEN_KEY="$(pwgen -s 16 1)"
-	sed -i "s/super secret unguessable key/${TOKEN_KEY}/g" /kavita/appsettings.json
-	
 	mv /kavita/appsettings.json /kavita/data/
 	ln -s /kavita/data/appsettings.json /kavita/
 fi
