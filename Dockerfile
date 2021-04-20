@@ -20,7 +20,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash - \
 COPY build_target.sh /build_target.sh
 RUN /build_target.sh
 
-#Production image for amd64 build
+#Production image
 FROM ubuntu:focal
 
 MAINTAINER Chris P
