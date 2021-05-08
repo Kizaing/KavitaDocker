@@ -17,4 +17,26 @@ else
 	ln -s /kavita/data/appsettings.json /kavita/
 fi
 
+#Checks if the data folders exist
+if [ -d /kavita/data/temp ]
+	ln -s /kavita/data/temp /kavita/temp
+else
+	mkdir /kavita/data/temp
+	ln -s /kavita/data/temp /kavita/temp
+fi
+
+if [ -d /kavita/data/cache ]
+	ln -s /kavita/data/cache /kavita/cache
+else
+	mkdir /kavita/data/cache
+	ln -s /kavita/data/cache /kavita/cache
+fi
+
+if [ -d /kavita/data/logs ]
+	ln -s /kavita/data/logs /kavita/logs
+else
+	mkdir /kavita/data/logs
+	ln -s /kavita/data/logs /kavita/logs
+fi
+
 ./Kavita
