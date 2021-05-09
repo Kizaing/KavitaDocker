@@ -54,7 +54,7 @@ or with docker-compose
 version: '3.9'
 services:
     kavita:
-        image: kizaing/kavita:latest
+        image: kizaing/kavita:nightly
         volumes:
             - ./manga:/manga
             - ./data:/kavita/data
