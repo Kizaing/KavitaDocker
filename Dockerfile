@@ -6,11 +6,6 @@ MAINTAINER Chris P
 ENV DEBIAN_FRONTEND=noninteractive
 ARG TARGETPLATFORM
 
-#Installs the needed required apps and then deletes the apt cache
-RUN apt-get update \
-  && apt-get install -y curl git \
-  && rm -rf /var/lib/apt/lists/*
-
 #Installs nodejs and npm
 RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash - \
   && apt-get install -y nodejs \

@@ -19,21 +19,42 @@ fi
 
 #Checks if the data folders exist
 if [ -d /kavita/data/temp ]
-	ln -s /kavita/data/temp /kavita/temp
+then
+	if [ -d /kavita/temp ]
+	then
+		unlink /kavita/temp
+		ln -s /kavita/data/temp /kavita/temp
+	else
+		ln -s /kavita/data/temp /kavita/temp
+	fi
 else
 	mkdir /kavita/data/temp
 	ln -s /kavita/data/temp /kavita/temp
 fi
 
 if [ -d /kavita/data/cache ]
-	ln -s /kavita/data/cache /kavita/cache
+then
+	if [ -d /kavita/cache ]
+	then
+		unlink /kavita/cache
+		ln -s /kavita/data/cache /kavita/cache
+	else
+		ln -s /kavita/data/cache /kavita/cache
+	fi
 else
 	mkdir /kavita/data/cache
 	ln -s /kavita/data/cache /kavita/cache
 fi
 
 if [ -d /kavita/data/logs ]
-	ln -s /kavita/data/logs /kavita/logs
+then
+	if [ -d /kavita/logs ]
+	then
+		unlink /kavita/logs
+		ln -s /kavita/data/logs /kavita/logs
+	else
+		ln -s /kavita/data/logs /kavita/logs
+	fi
 else
 	mkdir /kavita/data/logs
 	ln -s /kavita/data/logs /kavita/logs
