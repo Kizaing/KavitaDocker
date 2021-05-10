@@ -1,8 +1,6 @@
 #This Dockerfile pulls the latest git commit and builds Kavita from source
 FROM mcr.microsoft.com/dotnet/sdk:5.0-focal AS builder
 
-MAINTAINER Chris P
-
 ENV DEBIAN_FRONTEND=noninteractive
 ARG TARGETPLATFORM
 
@@ -17,8 +15,6 @@ RUN /build_target.sh
 
 #Production image
 FROM ubuntu:focal
-
-MAINTAINER Chris P
 
 #Move the output files to where they need to be
 COPY --from=builder /Projects/Kavita/_output/build/Kavita /kavita
