@@ -48,8 +48,9 @@ fi
 
 # Checks for the log file
 
-if test -f /kavita/data/logs/kavita.log
+if test -f "/kavita/data/logs/kavita.log"
 then
+	rm /kavita/kavita.log
 	ln -s /kavita/data/logs/kavita.log /kavita/
 else
 	if [ -d /kavita/data/logs ]
